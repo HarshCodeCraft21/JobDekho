@@ -21,6 +21,7 @@ import offerRouter from './routes/offer.routes.js';
 import { employeeHRRouter, employeeSelfRouter } from './routes/employee.routes.js';
 import geofenceRouter from './routes/geofence.routes.js';
 import attendanceRouter from './routes/attendance.routes.js';
+import feedbackRouter from './routes/feedback.routes.js';
 
 // Error Handler
 import { errorHandler } from "./middlewares/error.middleware.js";
@@ -64,6 +65,7 @@ app.use('/api/v1/employees', employeeHRRouter);
 app.use('/api/v1/employee', employeeSelfRouter);
 app.use('/api/v1/geofence', geofenceRouter);
 app.use('/api/v1/attendance', attendanceRouter);
+app.use('/api/v1/feedback', feedbackRouter);
 
 app.get("/health", (req, res) => {
     res.status(200).send("Server working fine");
